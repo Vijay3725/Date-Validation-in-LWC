@@ -1,0 +1,12 @@
+<template>
+    <lightning-card>
+        <div class="slds-p-around_medium">
+            <lightning-input label="Start Date" type="date" data-id="myInput" onchange={startDateHandler}></lightning-input>
+            <lightning-input label="End Date" type="date" data-id="myInput" onchange={endDateHandler}></lightning-input>
+        </div>
+        <lightning-button class="slds-p-around_medium" variant="brand" label="Submit" onclick={handleClick}></lightning-button>
+        <template lwc:if={error}>
+            <p>{error}</p>
+        </template>
+    </lightning-card>
+</template>
